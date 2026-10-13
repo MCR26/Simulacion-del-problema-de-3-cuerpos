@@ -24,8 +24,8 @@ Programa en Python que simula el movimiento gravitatorio de tres cuerpos en tres
 Clona el repositorio y entra en su carpeta:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd <NOMBRE_DEL_REPOSITORIO>
+git clone https://github.com/MCR26/Simulacion-del-problema-de-3-cuerpos
+cd Simulacion-del-problema-de-3-cuerpos
 ```
 
 Se recomienda usar un entorno virtual:
