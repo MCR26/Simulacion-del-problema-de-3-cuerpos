@@ -104,13 +104,12 @@ El parámetro `eps` modifica la ley de fuerza en distancias pequeñas; no es sol
 .
 ├── README.md
 ├── requirements.txt
-├── .gitignore
 └── simulacion_tres_cuerpos.py
 ```
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para ver el texto completo. Reemplaza `[TU NOMBRE]` en ese archivo por el nombre que quieras usar como titular antes de publicarlo.
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para ver el texto completo.
 
 ## Autoría
 

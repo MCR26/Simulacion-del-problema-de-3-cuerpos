@@ -217,6 +217,28 @@ r1_all = Y[:, 0:3]
 r2_all = Y[:, 3:6]
 r3_all = Y[:, 6:9]
 
+
+def total_energy(state, G, m1, m2, m3, eps):
+    """Energía total para el potencial gravitatorio suavizado de Plummer."""
+    positions = (state[0:3], state[3:6], state[6:9])
+    velocities = (state[9:12], state[12:15], state[15:18])
+    masses = (m1, m2, m3)
+
+    kinetic = sum(0.5 * mass * np.dot(velocity, velocity)
+                  for mass, velocity in zip(masses, velocities))
+    potential = 0.0
+    for i in range(3):
+        for j in range(i + 1, 3):
+            distance_squared = np.dot(positions[j] - positions[i],
+                                      positions[j] - positions[i])
+            potential -= G * masses[i] * masses[j] / np.sqrt(distance_squared + eps)
+    return kinetic + potential
+
+
+energy = np.array([total_energy(state, G, m1, m2, m3, eps) for state in Y])
+energy_drift = (energy - energy[0]) / abs(energy[0])
+print(f"Energía inicial (modelo suavizado): {energy[0]:.12g}")
+print(f"Deriva relativa máxima de energía: {np.max(np.abs(energy_drift)):.3e}")
 print("Simulación finalizada.")
 print(f"Tiempo final alcanzado: {T[-1]:.6f}")
 print(f"Número de puntos calculados: {len(T)}")
