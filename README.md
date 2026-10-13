@@ -81,7 +81,27 @@ Para cambiar el escenario, edita las posiciones `r1`, `r2`, `r3` y velocidades `
 ## Salidas
 
 - `trayectoria_3cuerpos.mp4`: animación de las posiciones y trayectorias de los cuerpos.
-- La figura 3D se muestra en una ventana interactiva durante la creación del video.
+- `simulaciones/trayectoria_3cuerpos_figura_8.gif`: simulación con las condiciones iniciales de la figura de ocho.
+
+  ![Animación de la figura de ocho](simulaciones/trayectoria_3cuerpos_figura_8.gif)
+
+- `simulaciones/trayectoria_3cuerpos_euler_colineal.gif`: simulación con las condiciones iniciales de Euler colineal. La velocidad se multiplicó por 5 para facilitar la visualización.
+
+  ![Animación de Euler colineal](simulaciones/trayectoria_3cuerpos_euler_colineal.gif)
+
+- La figura 3D aparece en una ventana interactiva durante la creación del video. Las interacciones con esa ventana —como rotar o ampliar la vista— también pueden quedar reflejadas en el video.
+
+- `simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif`: simulación de la figura de ocho sin simetría. La velocidad se multiplicó por 12 para facilitar la visualización.
+
+  ![Animación de la figura de ocho sin simetría](simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif)
+
+La ventana interactiva permanece abierta al terminar y permite rotar, trasladar y ampliar la vista. Estas capturas muestran distintas perspectivas de la trayectoria:
+
+![Figura de ocho sin simetría: toma 1](simulaciones/Figure_1.png)
+
+![Figura de ocho sin simetría: toma 2](simulaciones/Figure_2.png)
+
+![Figura de ocho sin simetría: toma 3](simulaciones/Figure_3.png)
 
 El script no exporta automáticamente los datos numéricos de posición y tiempo a CSV u otro formato.
 
