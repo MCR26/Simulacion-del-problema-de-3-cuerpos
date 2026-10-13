@@ -4,7 +4,7 @@ Programa en Python que simula el movimiento gravitatorio de tres cuerpos en tres
 
 ## Características
 
-- Fuerza gravitatoria newtoniana entre tres cuerpos.
+- Interacción gravitatoria entre tres cuerpos con potencial suavizado de Plummer.
 - Configuración inicial predeterminada: órbita periódica conocida como figura de ocho.
 - Otras condiciones iniciales incluidas en el código: configuración colineal de Euler, figura de ocho perturbada fuera del plano XY y órbitas circulares.
 - Integración RKF45 con control de error y paso adaptativo.
@@ -70,7 +70,7 @@ Los parámetros principales están definidos al inicio del script:
 | --- | --- |
 | `G` | Constante gravitatoria usada por la simulación. El valor predeterminado es `1.0`, en unidades normalizadas. |
 | `m1`, `m2`, `m3` | Masas de los tres cuerpos. |
-| `eps` | Suavizado numérico del denominador gravitatorio para limitar singularidades en encuentros cercanos. |
+| `eps` | Parámetro de suavizado del potencial gravitatorio. Con el valor predeterminado `1e-4`, la longitud de suavizado es `sqrt(eps) = 0.01` en las unidades del modelo. Suaviza la interacción durante los encuentros cercanos, por lo que cambiarlo también puede modificar las trayectorias. No representa el radio físico de los cuerpos. |
 | `t0`, `tf` | Tiempo inicial y final de integración. |
 | `h` | Paso inicial y paso máximo. |
 | `tol` | Tolerancia usada para aceptar o rechazar pasos del integrador. |
@@ -81,17 +81,17 @@ Para cambiar el escenario, edita las posiciones `r1`, `r2`, `r3` y velocidades `
 ## Salidas
 
 - `trayectoria_3cuerpos.mp4`: animación de las posiciones y trayectorias de los cuerpos.
-- `simulaciones/trayectoria_3cuerpos_figura_8.gif`: simulación con las condiciones iniciales de la figura de ocho.
+- `simulaciones/trayectoria_3cuerpos_figura_8.gif`: simulación con las condiciones iniciales de la figura de ocho y tf=10.
 
   ![Animación de la figura de ocho](simulaciones/trayectoria_3cuerpos_figura_8.gif)
 
-- `simulaciones/trayectoria_3cuerpos_euler_colineal.gif`: simulación con las condiciones iniciales de Euler colineal. La velocidad se multiplicó por 5 para facilitar la visualización.
+- `simulaciones/trayectoria_3cuerpos_euler_colineal.gif`: simulación con las condiciones iniciales de Euler colineal y tf= 100. La velocidad se aceleró x5 para facilitar la visualización; esto no altera la simulación ni los cálculos.
 
   ![Animación de Euler colineal](simulaciones/trayectoria_3cuerpos_euler_colineal.gif)
 
 - La figura 3D aparece en una ventana interactiva durante la creación del video. Las interacciones con esa ventana —como rotar o ampliar la vista— también pueden quedar reflejadas en el video.
 
-- `simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif`: simulación de la figura de ocho sin simetría. La velocidad se multiplicó por 12 para facilitar la visualización.
+- `simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif`: simulación de la figura de ocho sin simetría y un tf=500. La velocidad se aceleró x12 para facilitar la visualización; esto no altera la simulación ni los cálculos.
 
   ![Animación de la figura de ocho sin simetría](simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif)
 
@@ -104,6 +104,7 @@ La ventana interactiva permanece abierta al terminar y permite rotar, trasladar 
 ![Figura de ocho sin simetría: toma 3](simulaciones/Figure_3.png)
 
 El script no exporta automáticamente los datos numéricos de posición y tiempo a CSV u otro formato.
+Las imágenes y los GIFs son visualizaciones incluidas en el repositorio; el script genera el MP4.
 
 ## Notas sobre el método
 
