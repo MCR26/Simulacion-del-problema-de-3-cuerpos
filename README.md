@@ -85,13 +85,13 @@ Para cambiar el escenario, edita las posiciones `r1`, `r2`, `r3` y velocidades `
 
   ![Animación de la figura de ocho](simulaciones/trayectoria_3cuerpos_figura_8.gif)
 
-- `simulaciones/trayectoria_3cuerpos_euler_colineal.gif`: simulación con las condiciones iniciales de Euler colineal y tf= 100. La velocidad se aceleró x5 para facilitar la visualización; esto no altera la simulación ni los cálculos.
+- `simulaciones/trayectoria_3cuerpos_euler_colineal.gif`: simulación con las condiciones iniciales de Euler colineal y tf= 100. Para facilitar la visualización, la velocidad de reproducción del GIF se aceleró 5 veces. Esto no modifica la simulación ni los cálculos.
 
   ![Animación de Euler colineal](simulaciones/trayectoria_3cuerpos_euler_colineal.gif)
 
 - La figura 3D aparece en una ventana interactiva durante la creación del video. Las interacciones con esa ventana —como rotar o ampliar la vista— también pueden quedar reflejadas en el video.
 
-- `simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif`: simulación de la figura de ocho sin simetría y un tf=500. La velocidad se aceleró x12 para facilitar la visualización; esto no altera la simulación ni los cálculos.
+- `simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif`: simulación de la figura de ocho sin simetría y un tf=500. Para facilitar la visualización, la velocidad de reproducción del GIF se aceleró 12 veces. Esto no modifica la simulación ni los cálculos.
 
   ![Animación de la figura de ocho sin simetría](simulaciones/trayectoria_3cuerpos-8_sin_simetria.gif)
 
@@ -134,6 +134,6 @@ Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](
 
 ## Autoría
 
-Desarrollado por el autor de este repositorio.
+Moisés Cerdas Rivera
 
 
